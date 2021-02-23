@@ -40,6 +40,9 @@ class LeakyBucket:
 
         available_capacity: int = self.GetBucketAvailableCapacity()
 
+        # Save the timestamp of the last update
+        self._last_update_time = time
+
         if  available_capacity >=  ammount_of_data:
             # There is enough capacity for all the requested data
 
